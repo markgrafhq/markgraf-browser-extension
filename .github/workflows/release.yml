@@ -16,14 +16,14 @@ jobs:
     outputs:
       zip-name: ${{ steps.pack.outputs.zip-name }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: oven-sh/setup-bun@v2
       - run: bun install --frozen-lockfile
       - id: pack
         run: |
           bun run pack
           echo "zip-name=$(ls dist/*.zip | xargs -n1 basename)" >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: extension-zip
           path: dist/*.zip
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ vars.CHROME_EXTENSION_ID != '' }}
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: extension-zip
           path: dist
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ vars.FIREFOX_EXTENSION_ID != '' }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: oven-sh/setup-bun@v2
       - run: bun install --frozen-lockfile
       - run: bun run build
@@ -75,7 +75,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ vars.EDGE_PRODUCT_ID != '' }}
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: extension-zip
           path: dist
