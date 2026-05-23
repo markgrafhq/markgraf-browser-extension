@@ -68,7 +68,7 @@ jobs:
             --api-key="${{ secrets.AMO_JWT_ISSUER }}" \
             --api-secret="${{ secrets.AMO_JWT_SECRET }}" \
             --source-dir=. \
-            --ignore-files='node_modules/**' 'scripts/**' 'dist/**' '.github/**' 'package.json' 'bun.lock' '.gitignore' 'README.md'
+            --ignore-files='node_modules/**' 'scripts/**' 'src/**' 'output/**' 'output-es/**' '.spago/**' 'spago.yaml' 'spago.lock' 'dist/**' '.github/**' 'package.json' 'bun.lock' '.gitignore' 'README.md'
 
   edge:
     needs: build

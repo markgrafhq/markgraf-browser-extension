@@ -1,0 +1,22 @@
+package:
+  name: markgraf-browser-extension
+  dependencies:
+    - arrays
+    - console
+    - effect
+    - foldable-traversable
+    - foreign
+    - maybe
+    - nullable
+    - prelude
+    - refs
+    - strings
+    - unsafe-coerce
+    - web-dom
+    - web-html
+  build:
+    strict: true
+workspace:
+  packageSet:
+    registry: 73.2.0
+  extraPackages: {}

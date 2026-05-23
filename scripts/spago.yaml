@@ -1,0 +1,17 @@
+package:
+  name: markgraf-browser-extension-scripts
+  dependencies:
+    - console
+    - effect
+    - either
+    - exceptions
+    - maybe
+    - node-buffer
+    - node-fs
+    - node-process
+    - prelude
+    - strings
+workspace:
+  packageSet:
+    registry: 73.2.0
+  extraPackages: {}

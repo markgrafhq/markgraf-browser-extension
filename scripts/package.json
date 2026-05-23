@@ -1,0 +1,5 @@
+{
+  "name": "markgraf-browser-extension-scripts",
+  "private": true,
+  "type": "module"
+}

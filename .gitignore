@@ -1,5 +1,11 @@
 node_modules/
 assets/markgraf-embed.js
 assets/markgraf-embed.css
+assets/content.js
 *.zip
 dist/
+output/
+output-es/
+.spago/
+.psa-stash
+.DS_Store
