@@ -1,0 +1,14 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "@markgrafhq/markgraf-browser-extension",
+      "dependencies": {
+        "@markgrafhq/markgraf-embed": "^0.1.5",
+      },
+    },
+  },
+  "packages": {
+    "@markgrafhq/markgraf-embed": ["@markgrafhq/markgraf-embed@0.1.5", "", {}, "sha512-fJnRweJA6s91RgZEldDhXrQPcG3Ipsh43mLp+x1RRk4eVI89eGxyQp+eJW2b6gCp39i+nbS9kBZSh3JWMlHujA=="],
+  }
+}

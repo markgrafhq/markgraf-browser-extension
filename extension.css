@@ -1,0 +1,5 @@
+.markgraf-embed.markgraf-gh {
+  margin: 16px 0;
+  border: 1px solid var(--borderColor-default, #d1d9e0);
+  background: var(--bgColor-muted, #f6f8fa);
+}

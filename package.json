@@ -1,0 +1,16 @@
+{
+  "name": "@markgrafhq/markgraf-browser-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser extension that renders markgraf fenced code blocks live on GitHub (and other markdown surfaces).",
+  "scripts": {
+    "sync-embed": "bun scripts/sync-embed.mjs",
+    "build": "bun run sync-embed",
+    "prepack": "bun run build"
+  },
+  "dependencies": {
+    "@markgrafhq/markgraf-embed": "^0.1.5"
+  },
+  "license": "MIT",
+  "repository": "github:markgrafhq/markgraf-browser-extension"
+}

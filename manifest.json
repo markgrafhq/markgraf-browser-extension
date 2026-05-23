@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Markgraf for GitHub",
+  "version": "0.1.0",
+  "description": "Replace ```markgraf fenced blocks on GitHub with the live markgraf animation player.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*",
+        "https://gist.github.com/*"
+      ],
+      "js": ["assets/markgraf-embed.js", "content.js"],
+      "css": ["assets/markgraf-embed.css", "extension.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/CommitMono-Regular.woff2"],
+      "matches": ["https://github.com/*", "https://gist.github.com/*"]
+    }
+  ]
+}
