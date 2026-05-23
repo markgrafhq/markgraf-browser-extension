@@ -5,8 +5,9 @@
   "description": "Browser extension that renders markgraf fenced code blocks live on GitHub (and other markdown surfaces).",
   "scripts": {
     "sync-embed": "bun scripts/sync-embed.mjs",
-    "build": "bun run sync-embed",
-    "prepack": "bun run build"
+    "sync-version": "bun scripts/sync-version.mjs",
+    "build": "bun run sync-embed && bun run sync-version",
+    "pack": "bun run build && bun scripts/pack.mjs"
   },
   "dependencies": {
     "@markgrafhq/markgraf-embed": "^0.1.5"

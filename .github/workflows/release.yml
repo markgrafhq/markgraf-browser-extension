@@ -1,0 +1,88 @@
+name: release
+
+# Fires when a GitHub Release is published. Builds the zip, attaches it
+# to the release, and pushes to each store that has its secrets configured.
+# Jobs that lack their secrets are skipped via an `if:` guard so the
+# workflow still succeeds end-to-end on day one (zip-only) and gains
+# stores incrementally as you set their secrets.
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      zip-name: ${{ steps.pack.outputs.zip-name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - id: pack
+        run: |
+          bun run pack
+          echo "zip-name=$(ls dist/*.zip | xargs -n1 basename)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extension-zip
+          path: dist/*.zip
+          if-no-files-found: error
+      - name: Attach zip to GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "${{ github.event.release.tag_name }}" dist/*.zip --clobber
+
+  chrome:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ vars.CHROME_EXTENSION_ID != '' }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: extension-zip
+          path: dist
+      - name: Publish to Chrome Web Store
+        uses: mnao305/chrome-extension-upload@v5.0.0
+        with:
+          file-path: dist/${{ needs.build.outputs.zip-name }}
+          extension-id: ${{ vars.CHROME_EXTENSION_ID }}
+          client-id: ${{ secrets.CHROME_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+          publish: true
+
+  firefox:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ vars.FIREFOX_EXTENSION_ID != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run build
+      - name: Publish to Firefox AMO
+        run: |
+          bunx web-ext sign \
+            --channel=listed \
+            --api-key="${{ secrets.AMO_JWT_ISSUER }}" \
+            --api-secret="${{ secrets.AMO_JWT_SECRET }}" \
+            --source-dir=. \
+            --ignore-files='node_modules/**' 'scripts/**' 'dist/**' '.github/**' 'package.json' 'bun.lock' '.gitignore' 'README.md'
+
+  edge:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ vars.EDGE_PRODUCT_ID != '' }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: extension-zip
+          path: dist
+      - name: Publish to Edge Add-ons
+        uses: wdzeng/edge-addon@v2
+        with:
+          product-id: ${{ vars.EDGE_PRODUCT_ID }}
+          zip-path: dist/${{ needs.build.outputs.zip-name }}
+          api-key: ${{ secrets.EDGE_API_KEY }}
+          client-id: ${{ secrets.EDGE_CLIENT_ID }}
