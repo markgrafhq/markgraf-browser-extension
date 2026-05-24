@@ -203,11 +203,19 @@ mountAndDecorate doc el = do
       setAttribute "data-markgraf-lazy" "mounting" el
       loadFontThen fontSpec do
         src <- fromMaybe "" <$> getAttribute "data-markgraf-src" el
+        demotePlaceholder el
         mountEmbed el src
         setAttribute "data-markgraf-lazy" "done" el
         ensurePaused el
         installToggle doc el
     _ -> pure unit
+
+demotePlaceholder :: Element -> Effect Unit
+demotePlaceholder el = do
+  mPre <- querySelector (QuerySelector ".markgraf-source.markgraf-placeholder") (Element.toParentNode el)
+  for_ mPre \pre -> do
+    tokens <- classList pre
+    DOMTokenList.remove tokens "markgraf-placeholder"
 
 ensurePaused :: Element -> Effect Unit
 ensurePaused el = do
@@ -223,11 +231,6 @@ installToggle doc el = do
     Just "1" -> pure unit
     _ -> do
       setAttribute "data-markgraf-toggle" "1" el
-      src <- fromMaybe "" <$> getAttribute "data-markgraf-src" el
-      pre <- createElement "pre" doc
-      setClassName "markgraf-source" pre
-      setTextContent src (toNode pre)
-      _ <- appendChild (toNode pre) (toNode el)
       btn <- createElement "button" doc
       setClassName "markgraf-source-toggle" btn
       setAttribute "type" "button" btn
