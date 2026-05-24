@@ -23,7 +23,7 @@ export const pauseAllEmbedsImpl = () => {
   });
 };
 
-export const outerCodeContainerImpl = (el) =>
+export const outerCodeContainerImpl = (el) => () =>
   el.closest("div.highlight, div[class*='highlight-source-']") ||
   el.closest("pre") ||
   el;

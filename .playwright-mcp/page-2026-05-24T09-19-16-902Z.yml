@@ -1,0 +1,714 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global Navigation Menu" [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Open menu" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+          - link "Homepage (g then d)" [ref=e15] [cursor=pointer]:
+            - /url: /
+            - img [ref=e16]
+        - generic [ref=e18]:
+          - navigation "Breadcrumbs" [ref=e19]:
+            - list [ref=e20]:
+              - listitem [ref=e21]:
+                - link "markgrafhq" [ref=e22] [cursor=pointer]:
+                  - /url: /markgrafhq
+                  - generic [ref=e23]: markgrafhq
+              - listitem [ref=e24]:
+                - link "markgraf-browser-extension" [ref=e25] [cursor=pointer]:
+                  - /url: /markgrafhq/markgraf-browser-extension
+                  - generic [ref=e26]: markgraf-browser-extension
+          - button "Search or jump to…" [ref=e29] [cursor=pointer]:
+            - generic [ref=e30]:
+              - generic:
+                - img
+              - generic [ref=e31]:
+                - generic:
+                  - text: Type
+                  - generic: /
+                  - text: to search
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e36]:
+              - link "Chat with Copilot" [ref=e38] [cursor=pointer]:
+                - /url: /copilot
+                - img [ref=e39]
+              - button "Open Copilot…" [ref=e43] [cursor=pointer]:
+                - generic:
+                  - img
+            - button "Create new..." [ref=e45] [cursor=pointer]:
+              - generic [ref=e46]:
+                - generic:
+                  - img
+              - generic:
+                - img
+            - generic [ref=e47]:
+              - link "All issues" [ref=e48] [cursor=pointer]:
+                - /url: /issues
+                - img [ref=e49]
+              - link "All pull requests" [ref=e52] [cursor=pointer]:
+                - /url: /pulls
+                - img [ref=e53]
+              - link "All repositories" [ref=e55] [cursor=pointer]:
+                - /url: /repos
+                - img [ref=e56]
+          - link "You have unread notifications (g then n)" [ref=e58] [cursor=pointer]:
+            - /url: /notifications
+            - img [ref=e59]
+          - button "Open user navigation menu" [ref=e62] [cursor=pointer]:
+            - img "Mark Eibes" [ref=e63]
+      - heading "Repository navigation" [level=2] [ref=e64]
+      - navigation "Repository" [ref=e65]:
+        - list [ref=e66]:
+          - listitem [ref=e67]:
+            - link "Code" [ref=e68] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension
+              - img [ref=e70]
+              - generic [ref=e72]: Code
+          - listitem [ref=e73]:
+            - link "Issues" [ref=e74] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/issues
+              - img [ref=e76]
+              - generic [ref=e79]: Issues
+          - listitem [ref=e80]:
+            - link "Pull requests" [ref=e81] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/pulls
+              - img [ref=e83]
+              - generic [ref=e85]: Pull requests
+          - listitem [ref=e86]:
+            - link "Actions" [ref=e87] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/actions
+              - img [ref=e89]
+              - generic [ref=e91]: Actions
+          - listitem [ref=e92]:
+            - link "Projects" [ref=e93] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/projects
+              - img [ref=e95]
+              - generic [ref=e97]: Projects
+          - listitem [ref=e98]:
+            - link "Wiki" [ref=e99] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/wiki
+              - img [ref=e101]
+              - generic [ref=e103]: Wiki
+          - listitem [ref=e104]:
+            - link "Security and quality" [ref=e105] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/security
+              - img [ref=e107]
+              - generic [ref=e109]: Security and quality
+          - listitem [ref=e110]:
+            - link "Insights" [ref=e111] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/pulse
+              - img [ref=e113]
+              - generic [ref=e115]: Insights
+          - listitem [ref=e116]:
+            - link "Settings" [ref=e117] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/settings
+              - img [ref=e119]
+              - generic [ref=e121]: Settings
+  - main [ref=e125]:
+    - generic [ref=e138]:
+      - generic [ref=e141]:
+        - generic [ref=e143]:
+          - generic [ref=e145]:
+            - img "Owner avatar" [ref=e146]
+            - strong [ref=e147]:
+              - link "markgraf-browser-extension" [ref=e148] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension
+            - generic [ref=e149]: Public
+          - generic [ref=e150]:
+            - list:
+              - listitem [ref=e151]:
+                - group [ref=e153]:
+                  - button "Edit Pins" [ref=e154] [cursor=pointer]:
+                    - img [ref=e155]
+                    - text: Edit Pins
+              - listitem [ref=e158]:
+                - 'button "Watch: Participating in markgrafhq/markgraf-browser-extension" [ref=e161] [cursor=pointer]':
+                  - generic [ref=e162]:
+                    - generic:
+                      - img
+                    - generic [ref=e163]: Watch
+                    - generic:
+                      - generic: "0"
+                      - generic: (0)
+                  - generic:
+                    - img
+              - listitem [ref=e164]:
+                - generic [ref=e165]:
+                  - link "Fork 0" [ref=e166] [cursor=pointer]:
+                    - /url: /markgrafhq/markgraf-browser-extension/fork
+                    - img [ref=e167]
+                    - text: Fork
+                    - generic "0" [ref=e169]
+                  - group [ref=e170]:
+                    - button "See your forks of this repository" [ref=e171] [cursor=pointer]:
+                      - img [ref=e172]
+              - listitem [ref=e174]:
+                - generic [ref=e176]:
+                  - button "Star this repository (0)" [ref=e178] [cursor=pointer]:
+                    - img [ref=e179]
+                    - text: Star
+                    - generic "0 users starred this repository" [ref=e181]: "0"
+                  - button "Add this repository to a list" [ref=e185] [cursor=pointer]:
+                    - img
+        - heading "markgrafhq/markgraf-browser-extension" [level=1] [ref=e188]
+      - generic [ref=e189]:
+        - generic [ref=e192]:
+          - generic [ref=e193]:
+            - generic [ref=e194]:
+              - button "main branch" [ref=e196] [cursor=pointer]:
+                - generic [ref=e197]:
+                  - generic [ref=e199]:
+                    - img [ref=e201]
+                    - generic [ref=e204]: main
+                  - generic:
+                    - img
+              - generic [ref=e205]:
+                - link "Go to Branches page" [ref=e206] [cursor=pointer]:
+                  - /url: /markgrafhq/markgraf-browser-extension/branches
+                  - img [ref=e207]
+                - link "Go to Tags page" [ref=e209] [cursor=pointer]:
+                  - /url: /markgrafhq/markgraf-browser-extension/tags
+                  - img [ref=e210]
+            - generic [ref=e212]:
+              - generic [ref=e213]:
+                - generic [ref=e216]:
+                  - img [ref=e218]
+                  - combobox "Go to file" [ref=e220]
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: t
+                    - generic [ref=e225]: T
+                - generic [ref=e226]:
+                  - heading "Add file" [level=2] [ref=e227]
+                  - button "Add file" [ref=e228] [cursor=pointer]:
+                    - img [ref=e231]
+              - button "Code" [ref=e233] [cursor=pointer]:
+                - generic [ref=e234]:
+                  - generic:
+                    - img
+                  - generic [ref=e235]: Code
+                  - generic:
+                    - img
+          - generic [ref=e236]:
+            - generic [ref=e237]:
+              - heading "Folders and files" [level=2] [ref=e238]
+              - table "Folders and files" [ref=e239]:
+                - rowgroup:
+                  - row "Name Last commit message Last commit date":
+                    - columnheader "Name"
+                    - columnheader "Last commit message":
+                      - generic "Last commit message"
+                    - columnheader "Last commit date":
+                      - generic "Last commit date"
+                - rowgroup [ref=e240]:
+                  - row "Latest commit i-am-the-slime commits by i-am-the-slime Add esbuild devDep (required by purs-backend-es bundle-app in CI) success Commit 6c749f2 · May 23, 202615 hours ago History 5 Commits" [ref=e241]:
+                    - cell "Latest commit i-am-the-slime commits by i-am-the-slime Add esbuild devDep (required by purs-backend-es bundle-app in CI) success Commit 6c749f2 · May 23, 202615 hours ago History 5 Commits" [ref=e242]:
+                      - generic [ref=e243]:
+                        - heading "Latest commit" [level=2] [ref=e244]
+                        - generic [ref=e245]:
+                          - generic [ref=e247]:
+                            - link "i-am-the-slime" [ref=e248] [cursor=pointer]:
+                              - /url: /i-am-the-slime
+                              - img "i-am-the-slime" [ref=e249]
+                            - link "commits by i-am-the-slime" [ref=e250] [cursor=pointer]:
+                              - /url: /markgrafhq/markgraf-browser-extension/commits?author=i-am-the-slime
+                              - text: i-am-the-slime
+                          - generic [ref=e251]:
+                            - link "Add esbuild devDep (required by purs-backend-es bundle-app in CI)" [ref=e254] [cursor=pointer]:
+                              - /url: /markgrafhq/markgraf-browser-extension/commit/6c749f2ccb4b03680a2378c40f9d2310e9b3b15c
+                            - button "success" [ref=e255] [cursor=pointer]:
+                              - img [ref=e256]
+                        - generic [ref=e258]:
+                          - generic [ref=e260]:
+                            - link "Commit 6c749f2" [ref=e261] [cursor=pointer]:
+                              - /url: /markgrafhq/markgraf-browser-extension/commit/6c749f2ccb4b03680a2378c40f9d2310e9b3b15c
+                              - text: 6c749f2
+                            - text: ·
+                            - generic "May 23, 2026, 7:26 PM GMT+2" [ref=e262]: May 23, 202615 hours ago
+                          - generic [ref=e263]:
+                            - heading "History" [level=2] [ref=e264]
+                            - link "5 Commits" [ref=e265] [cursor=pointer]:
+                              - /url: /markgrafhq/markgraf-browser-extension/commits/main/
+                              - generic [ref=e266]:
+                                - generic:
+                                  - img
+                                - generic [ref=e267]: 5 Commits
+                  - row ".github/workflows, (Directory) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e268]:
+                    - cell ".github/workflows, (Directory)" [ref=e269]:
+                      - generic [ref=e270]:
+                        - img [ref=e271]
+                        - link ".github/workflows, (Directory)" [ref=e276] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/tree/main/.github/workflows
+                          - text: .github/workflows
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e277]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e280] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e281]:
+                      - generic [ref=e282]: May 23, 202615 hours ago
+                  - 'row "assets, (Directory) Initial commit: browser extension extracted from markgrafhq/markgraf May 23, 202616 hours ago" [ref=e283]':
+                    - cell "assets, (Directory)" [ref=e284]:
+                      - generic [ref=e285]:
+                        - img [ref=e286]
+                        - link "assets, (Directory)" [ref=e291] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/tree/main/assets
+                          - text: assets
+                    - 'cell "Initial commit: browser extension extracted from markgrafhq/markgraf" [ref=e292]':
+                      - 'link "Initial commit: browser extension extracted from markgrafhq/markgraf" [ref=e295] [cursor=pointer]':
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/3d582da01accdd95d997fa8993e1f61a114be517
+                    - cell "May 23, 202616 hours ago" [ref=e296]:
+                      - generic [ref=e297]: May 23, 202616 hours ago
+                  - row "scripts, (Directory) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e298]:
+                    - cell "scripts, (Directory)" [ref=e299]:
+                      - generic [ref=e300]:
+                        - img [ref=e301]
+                        - link "scripts, (Directory)" [ref=e306] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/tree/main/scripts
+                          - text: scripts
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e307]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e310] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e311]:
+                      - generic [ref=e312]: May 23, 202615 hours ago
+                  - row "src/Markgraf/Extension, (Directory) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e313]:
+                    - cell "src/Markgraf/Extension, (Directory)" [ref=e314]:
+                      - generic [ref=e315]:
+                        - img [ref=e316]
+                        - link "src/Markgraf/Extension, (Directory)" [ref=e321] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/tree/main/src/Markgraf/Extension
+                          - text: src/Markgraf/Extension
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e322]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e325] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e326]:
+                      - generic [ref=e327]: May 23, 202615 hours ago
+                  - row "store-assets, (Directory) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e328]:
+                    - cell "store-assets, (Directory)" [ref=e329]:
+                      - generic [ref=e330]:
+                        - img [ref=e331]
+                        - link "store-assets, (Directory)" [ref=e336] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/tree/main/store-assets
+                          - text: store-assets
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e337]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e340] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e341]:
+                      - generic [ref=e342]: May 23, 202615 hours ago
+                  - row ".gitignore, (File) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e343]:
+                    - cell ".gitignore, (File)" [ref=e344]:
+                      - generic [ref=e345]:
+                        - img [ref=e346]
+                        - link ".gitignore, (File)" [ref=e351] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/blob/main/.gitignore
+                          - text: .gitignore
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e352]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e355] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e356]:
+                      - generic [ref=e357]: May 23, 202615 hours ago
+                  - row "README.md, (File) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e358]:
+                    - cell "README.md, (File)" [ref=e359]:
+                      - generic [ref=e360]:
+                        - img [ref=e361]
+                        - link "README.md, (File)" [ref=e366] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/blob/main/README.md
+                          - text: README.md
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e367]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e370] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e371]:
+                      - generic [ref=e372]: May 23, 202615 hours ago
+                  - row "bun.lock, (File) Add esbuild devDep (required by purs-backend-es bundle-app in CI) May 23, 202615 hours ago" [ref=e373]:
+                    - cell "bun.lock, (File)" [ref=e374]:
+                      - generic [ref=e375]:
+                        - img [ref=e376]
+                        - link "bun.lock, (File)" [ref=e381] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/blob/main/bun.lock
+                          - text: bun.lock
+                    - cell "Add esbuild devDep (required by purs-backend-es bundle-app in CI)" [ref=e382]:
+                      - link "Add esbuild devDep (required by purs-backend-es bundle-app in CI)" [ref=e385] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/6c749f2ccb4b03680a2378c40f9d2310e9b3b15c
+                    - cell "May 23, 202615 hours ago" [ref=e386]:
+                      - generic [ref=e387]: May 23, 202615 hours ago
+                  - 'row "extension.css, (File) Initial commit: browser extension extracted from markgrafhq/markgraf May 23, 202616 hours ago" [ref=e388]':
+                    - cell "extension.css, (File)" [ref=e389]:
+                      - generic [ref=e390]:
+                        - img [ref=e391]
+                        - link "extension.css, (File)" [ref=e396] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/blob/main/extension.css
+                          - text: extension.css
+                    - 'cell "Initial commit: browser extension extracted from markgrafhq/markgraf" [ref=e397]':
+                      - 'link "Initial commit: browser extension extracted from markgrafhq/markgraf" [ref=e400] [cursor=pointer]':
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/3d582da01accdd95d997fa8993e1f61a114be517
+                    - cell "May 23, 202616 hours ago" [ref=e401]:
+                      - generic [ref=e402]: May 23, 202616 hours ago
+                  - row "manifest.json, (File) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e403]:
+                    - cell "manifest.json, (File)" [ref=e404]:
+                      - generic [ref=e405]:
+                        - img [ref=e406]
+                        - link "manifest.json, (File)" [ref=e411] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/blob/main/manifest.json
+                          - text: manifest.json
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e412]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e415] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e416]:
+                      - generic [ref=e417]: May 23, 202615 hours ago
+                  - row "package.json, (File) Add esbuild devDep (required by purs-backend-es bundle-app in CI) May 23, 202615 hours ago" [ref=e418]:
+                    - cell "package.json, (File)" [ref=e419]:
+                      - generic [ref=e420]:
+                        - img [ref=e421]
+                        - link "package.json, (File)" [ref=e426] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/blob/main/package.json
+                          - text: package.json
+                    - cell "Add esbuild devDep (required by purs-backend-es bundle-app in CI)" [ref=e427]:
+                      - link "Add esbuild devDep (required by purs-backend-es bundle-app in CI)" [ref=e430] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/6c749f2ccb4b03680a2378c40f9d2310e9b3b15c
+                    - cell "May 23, 202615 hours ago" [ref=e431]:
+                      - generic [ref=e432]: May 23, 202615 hours ago
+                  - row "spago.lock, (File) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e433]:
+                    - cell "spago.lock, (File)" [ref=e434]:
+                      - generic [ref=e435]:
+                        - img [ref=e436]
+                        - link "spago.lock, (File)" [ref=e441] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/blob/main/spago.lock
+                          - text: spago.lock
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e442]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e445] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e446]:
+                      - generic [ref=e447]: May 23, 202615 hours ago
+                  - row "spago.yaml, (File) Rewrite extension in PureScript; add demo block to README May 23, 202615 hours ago" [ref=e448]:
+                    - cell "spago.yaml, (File)" [ref=e449]:
+                      - generic [ref=e450]:
+                        - img [ref=e451]
+                        - link "spago.yaml, (File)" [ref=e456] [cursor=pointer]:
+                          - /url: /markgrafhq/markgraf-browser-extension/blob/main/spago.yaml
+                          - text: spago.yaml
+                    - cell "Rewrite extension in PureScript; add demo block to README" [ref=e457]:
+                      - link "Rewrite extension in PureScript; add demo block to README" [ref=e460] [cursor=pointer]:
+                        - /url: /markgrafhq/markgraf-browser-extension/commit/af87da9debe0c073af01e4e5f43684407fe2346a
+                    - cell "May 23, 202615 hours ago" [ref=e461]:
+                      - generic [ref=e462]: May 23, 202615 hours ago
+            - generic [ref=e464]:
+              - generic [ref=e465]:
+                - heading "Repository files navigation" [level=2] [ref=e466]
+                - navigation "Repository files" [ref=e467]:
+                  - list [ref=e468]:
+                    - listitem [ref=e469]:
+                      - link "README" [ref=e470] [cursor=pointer]:
+                        - /url: "#"
+                        - img [ref=e472]
+                        - generic [ref=e474]: README
+                - button "Edit file" [ref=e475] [cursor=pointer]:
+                  - img [ref=e476]
+                - button "Outline" [ref=e478] [cursor=pointer]:
+                  - img [ref=e479]
+              - article [ref=e482]:
+                - generic [ref=e483]:
+                  - heading "markgraf-browser-extension" [level=1] [ref=e484]
+                  - 'link "Permalink: markgraf-browser-extension" [ref=e485] [cursor=pointer]':
+                    - /url: "#markgraf-browser-extension"
+                    - img [ref=e486]
+                - paragraph [ref=e488]:
+                  - text: Browser extension that finds
+                  - code [ref=e489]: "```markgraf"
+                  - text: fenced code blocks on rendered markdown pages and replaces them with the live
+                  - link "markgraf" [ref=e490] [cursor=pointer]:
+                    - /url: https://github.com/markgrafhq/markgraf
+                  - text: animation player.
+                - paragraph [ref=e491]:
+                  - text: Currently activates on github.com and gist.github.com; more surfaces (Notion, Reddit, Hacker News, etc.) can be added by extending
+                  - code [ref=e492]: manifest.json
+                  - text: "'s"
+                  - code [ref=e493]: content_scripts[].matches
+                  - text: .
+                - generic [ref=e494]:
+                  - heading "Demo" [level=2] [ref=e495]
+                  - 'link "Permalink: Demo" [ref=e496] [cursor=pointer]':
+                    - /url: "#demo"
+                    - img [ref=e497]
+                - paragraph [ref=e499]: If the block below shows source code instead of a playable animation, you don't have the extension installed — install it (see below) and reload this page.
+                - generic [ref=e500]:
+                  - generic [ref=e501]:
+                    - generic:
+                      - button "play"
+                      - generic:
+                        - slider: "8"
+                        - generic:
+                          - generic [ref=e503] [cursor=pointer]: write request
+                          - generic [ref=e504] [cursor=pointer]: invalidate cache
+                          - generic [ref=e505] [cursor=pointer]: respond
+                      - generic: 0.08 / 10.04
+                      - combobox "speed":
+                        - option "0.25×"
+                        - option "0.5×"
+                        - option "1×" [selected]
+                        - option "2×"
+                  - button "Copy code to clipboard" [ref=e507] [cursor=pointer]:
+                    - img [ref=e508]
+                - generic [ref=e511]:
+                  - heading "Install" [level=2] [ref=e512]
+                  - 'link "Permalink: Install" [ref=e513] [cursor=pointer]':
+                    - /url: "#install"
+                    - img [ref=e514]
+                - list [ref=e516]:
+                  - listitem [ref=e517]:
+                    - strong [ref=e518]: Chrome / Brave / Opera / Vivaldi / Arc
+                    - text: ": Chrome Web Store"
+                    - emphasis [ref=e519]: (pending)
+                  - listitem [ref=e520]:
+                    - strong [ref=e521]: Firefox
+                    - text: ": addons.mozilla.org"
+                    - emphasis [ref=e522]: (pending)
+                  - listitem [ref=e523]:
+                    - strong [ref=e524]: Edge
+                    - text: ": Edge Add-ons"
+                    - emphasis [ref=e525]: (pending)
+                  - listitem [ref=e526]:
+                    - strong [ref=e527]: Any Chromium
+                    - text: ": download the latest zip from"
+                    - link "Releases" [ref=e528] [cursor=pointer]:
+                      - /url: https://github.com/markgrafhq/markgraf-browser-extension/releases
+                    - text: ", unzip, open"
+                    - code [ref=e529]: chrome://extensions
+                    - text: ", enable Developer Mode, click \"Load unpacked\", pick the unzipped directory."
+                - generic [ref=e530]:
+                  - heading "Develop" [level=2] [ref=e531]
+                  - 'link "Permalink: Develop" [ref=e532] [cursor=pointer]':
+                    - /url: "#develop"
+                    - img [ref=e533]
+                - generic [ref=e535]:
+                  - generic [ref=e536]:
+                    - text: bun install bun run build
+                    - generic [ref=e537]: "# pulls in @markgrafhq/markgraf-embed and syncs into assets/"
+                  - button "Copy code to clipboard" [ref=e539] [cursor=pointer]:
+                    - img [ref=e540]
+                - paragraph [ref=e543]:
+                  - text: "Then in Chrome:"
+                  - code [ref=e544]: chrome://extensions
+                  - text: → Developer Mode → Load unpacked → pick this directory.
+                - paragraph [ref=e545]: "To pack a distributable zip:"
+                - generic [ref=e546]:
+                  - generic [ref=e547]:
+                    - text: bun run pack
+                    - generic [ref=e548]: "# writes dist/markgraf-browser-extension-<version>.zip"
+                  - button "Copy code to clipboard" [ref=e550] [cursor=pointer]:
+                    - img [ref=e551]
+                - generic [ref=e554]:
+                  - heading "Release" [level=2] [ref=e555]
+                  - 'link "Permalink: Release" [ref=e556] [cursor=pointer]':
+                    - /url: "#release"
+                    - img [ref=e557]
+                - list [ref=e559]:
+                  - listitem [ref=e560]:
+                    - text: Bump
+                    - code [ref=e561]: version
+                    - text: in
+                    - code [ref=e562]: package.json
+                    - text: (this becomes the manifest version too —
+                    - code [ref=e563]: scripts/src/SyncVersion.purs
+                    - text: mirrors it before packing).
+                  - listitem [ref=e564]:
+                    - code [ref=e565]: git tag v0.x.y && git push --tags
+                    - text: .
+                  - listitem [ref=e566]:
+                    - text: Create a GitHub Release on that tag.
+                    - code [ref=e567]: release.yml
+                    - text: builds the zip, attaches it to the release, and pushes to whichever stores have their secrets configured (jobs without secrets are skipped, not failed).
+                - generic [ref=e568]:
+                  - heading "Required secrets / variables" [level=3] [ref=e569]
+                  - 'link "Permalink: Required secrets / variables" [ref=e570] [cursor=pointer]':
+                    - /url: "#required-secrets--variables"
+                    - img [ref=e571]
+                - paragraph [ref=e573]:
+                  - text: Set as
+                  - strong [ref=e574]: Variables
+                  - text: "(non-sensitive, public-by-design):"
+                - table [ref=e576]:
+                  - rowgroup [ref=e577]:
+                    - row "Variable Purpose" [ref=e578]:
+                      - columnheader "Variable" [ref=e579]
+                      - columnheader "Purpose" [ref=e580]
+                  - rowgroup [ref=e581]:
+                    - row "CHROME_EXTENSION_ID Item ID from your Chrome Web Store listing" [ref=e582]:
+                      - cell "CHROME_EXTENSION_ID" [ref=e583]:
+                        - code [ref=e584]: CHROME_EXTENSION_ID
+                      - cell "Item ID from your Chrome Web Store listing" [ref=e585]
+                    - row "FIREFOX_EXTENSION_ID Add-on slug or GUID from AMO (used as a presence gate)" [ref=e586]:
+                      - cell "FIREFOX_EXTENSION_ID" [ref=e587]:
+                        - code [ref=e588]: FIREFOX_EXTENSION_ID
+                      - cell "Add-on slug or GUID from AMO (used as a presence gate)" [ref=e589]
+                    - row "EDGE_PRODUCT_ID Product ID from Edge Partner Center" [ref=e590]:
+                      - cell "EDGE_PRODUCT_ID" [ref=e591]:
+                        - code [ref=e592]: EDGE_PRODUCT_ID
+                      - cell "Product ID from Edge Partner Center" [ref=e593]
+                - paragraph [ref=e594]:
+                  - text: Set as
+                  - strong [ref=e595]: Secrets
+                  - text: "(sensitive):"
+                - table [ref=e597]:
+                  - rowgroup [ref=e598]:
+                    - row "Secret How to get it" [ref=e599]:
+                      - columnheader "Secret" [ref=e600]
+                      - columnheader "How to get it" [ref=e601]
+                  - rowgroup [ref=e602]:
+                    - row "CHROME_CLIENT_ID / CHROME_CLIENT_SECRET / CHROME_REFRESH_TOKEN Chrome Web Store API guide" [ref=e603]:
+                      - cell "CHROME_CLIENT_ID / CHROME_CLIENT_SECRET / CHROME_REFRESH_TOKEN" [ref=e604]:
+                        - code [ref=e605]: CHROME_CLIENT_ID
+                        - text: /
+                        - code [ref=e606]: CHROME_CLIENT_SECRET
+                        - text: /
+                        - code [ref=e607]: CHROME_REFRESH_TOKEN
+                      - cell "Chrome Web Store API guide" [ref=e608]:
+                        - link "Chrome Web Store API guide" [ref=e609] [cursor=pointer]:
+                          - /url: https://developer.chrome.com/docs/webstore/using-api
+                    - row "AMO_JWT_ISSUER / AMO_JWT_SECRET https://addons.mozilla.org/developers/addon/api/key/" [ref=e610]:
+                      - cell "AMO_JWT_ISSUER / AMO_JWT_SECRET" [ref=e611]:
+                        - code [ref=e612]: AMO_JWT_ISSUER
+                        - text: /
+                        - code [ref=e613]: AMO_JWT_SECRET
+                      - cell "https://addons.mozilla.org/developers/addon/api/key/" [ref=e614]:
+                        - link "https://addons.mozilla.org/developers/addon/api/key/" [ref=e615] [cursor=pointer]:
+                          - /url: https://addons.mozilla.org/developers/addon/api/key/
+                    - row "EDGE_API_KEY / EDGE_CLIENT_ID Partner Center → Edge → API publishing settings" [ref=e616]:
+                      - cell "EDGE_API_KEY / EDGE_CLIENT_ID" [ref=e617]:
+                        - code [ref=e618]: EDGE_API_KEY
+                        - text: /
+                        - code [ref=e619]: EDGE_CLIENT_ID
+                      - cell "Partner Center → Edge → API publishing settings" [ref=e620]
+                - paragraph [ref=e621]: Until a store's variables/secrets are set, its publish job is skipped — the release still happens with the zip attached for manual upload.
+        - generic [ref=e625]:
+          - generic [ref=e627]:
+            - group:
+              - button "Edit repository metadata" [ref=e628] [cursor=pointer]:
+                - img "Edit repository metadata" [ref=e630]
+            - generic [ref=e632]:
+              - heading "About" [level=2] [ref=e633]
+              - paragraph [ref=e634]: Browser extension that renders markgraf fenced code blocks live on GitHub (and other markdown surfaces).
+              - heading "Resources" [level=3] [ref=e635]
+              - link "Readme" [ref=e637] [cursor=pointer]:
+                - /url: "#readme-ov-file"
+                - img [ref=e638]
+                - text: Readme
+              - link "Activity" [ref=e641] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension/activity
+                - img [ref=e642]
+                - text: Activity
+              - link "Custom properties" [ref=e645] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension/custom-properties
+                - img [ref=e646]
+                - text: Custom properties
+              - heading "Stars" [level=3] [ref=e648]
+              - link "0 stars" [ref=e650] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension/stargazers
+                - img [ref=e651]
+                - strong [ref=e653]: "0"
+                - text: stars
+              - heading "Watchers" [level=3] [ref=e654]
+              - link "0 watching" [ref=e656] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension/watchers
+                - img [ref=e657]
+                - strong [ref=e659]: "0"
+                - text: watching
+              - heading "Forks" [level=3] [ref=e660]
+              - link "0 forks" [ref=e662] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension/forks
+                - img [ref=e663]
+                - strong [ref=e665]: "0"
+                - text: forks
+              - link "Audit log" [ref=e667] [cursor=pointer]:
+                - /url: /organizations/markgrafhq/settings/audit-log?q=repo%3Amarkgrafhq%2Fmarkgraf-browser-extension
+                - img [ref=e668]
+                - text: Audit log
+              - link "Report repository" [ref=e672] [cursor=pointer]:
+                - /url: /contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fmarkgrafhq%2Fmarkgraf-browser-extension&report=markgrafhq+%28user%29
+          - generic [ref=e674]:
+            - heading "Releases" [level=2] [ref=e675]:
+              - link "Releases" [ref=e676] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension/releases
+            - generic [ref=e677]: No releases published
+            - link "Create a new release" [ref=e679] [cursor=pointer]:
+              - /url: /markgrafhq/markgraf-browser-extension/releases/new
+          - generic [ref=e681]:
+            - heading "Packages" [level=2] [ref=e682]:
+              - link "Packages" [ref=e683] [cursor=pointer]:
+                - /url: /orgs/markgrafhq/packages?repo_name=markgraf-browser-extension
+            - generic [ref=e684]:
+              - text: No packages published
+              - link "Publish your first package" [ref=e685] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension/packages
+          - generic [ref=e687]:
+            - heading "Contributors 1" [level=2] [ref=e688]:
+              - link "Contributors 1" [ref=e689] [cursor=pointer]:
+                - /url: /markgrafhq/markgraf-browser-extension/graphs/contributors
+                - text: Contributors
+                - generic "1" [ref=e690]
+            - list [ref=e691]:
+              - listitem [ref=e692]:
+                - link "@i-am-the-slime" [ref=e693] [cursor=pointer]:
+                  - /url: https://github.com/i-am-the-slime
+                  - img "@i-am-the-slime" [ref=e694]
+                - link "i-am-the-slime Mark Eibes" [ref=e696] [cursor=pointer]:
+                  - /url: https://github.com/i-am-the-slime
+                  - strong [ref=e697]: i-am-the-slime
+                  - text: Mark Eibes
+          - generic [ref=e699]:
+            - heading "Languages" [level=2] [ref=e700]
+            - list [ref=e706]:
+              - listitem [ref=e707]:
+                - link "PureScript 88.5%" [ref=e708] [cursor=pointer]:
+                  - /url: /markgrafhq/markgraf-browser-extension/search?l=purescript
+                  - img [ref=e709]
+                  - generic [ref=e711]: PureScript
+                  - generic [ref=e712]: 88.5%
+              - listitem [ref=e713]:
+                - link "JavaScript 10.3%" [ref=e714] [cursor=pointer]:
+                  - /url: /markgrafhq/markgraf-browser-extension/search?l=javascript
+                  - img [ref=e715]
+                  - generic [ref=e717]: JavaScript
+                  - generic [ref=e718]: 10.3%
+              - listitem [ref=e719]:
+                - link "CSS 1.2%" [ref=e720] [cursor=pointer]:
+                  - /url: /markgrafhq/markgraf-browser-extension/search?l=css
+                  - img [ref=e721]
+                  - generic [ref=e723]: CSS
+                  - generic [ref=e724]: 1.2%
+  - contentinfo [ref=e726]:
+    - heading "Footer" [level=2] [ref=e727]
+    - generic [ref=e728]:
+      - generic [ref=e729]:
+        - link "GitHub Homepage" [ref=e730] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e731]
+        - generic [ref=e733]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e734]:
+        - heading "Footer navigation" [level=3] [ref=e735]
+        - list "Footer navigation" [ref=e736]:
+          - listitem [ref=e737]:
+            - link "Terms" [ref=e738] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e739]:
+            - link "Privacy" [ref=e740] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e741]:
+            - link "Security" [ref=e742] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e743]:
+            - link "Status" [ref=e744] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e745]:
+            - link "Community" [ref=e746] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e747]:
+            - link "Docs" [ref=e748] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e749]:
+            - link "Contact" [ref=e750] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e751]:
+            - button "Manage cookies" [ref=e753] [cursor=pointer]
+          - listitem [ref=e754]:
+            - button "Do not share my personal information" [ref=e756] [cursor=pointer]

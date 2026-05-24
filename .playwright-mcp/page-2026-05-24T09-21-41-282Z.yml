@@ -1,0 +1,5 @@
+- generic [ref=e2]:
+  - heading "Block A" [level=2] [ref=e3]
+  - code [ref=e6]: "seed 1 frame setup { +node client \"Client\" +node api \"API\" +edge client api } frame \"request\" { client -> api \"GET /user\" client <- api \"200 OK\" }"
+  - heading "Block B" [level=2] [ref=e7]
+  - code [ref=e10]: "seed 2 frame setup { +node a \"A\" +node b \"B\" +edge a b } frame go { a -> b \"hi\" }"

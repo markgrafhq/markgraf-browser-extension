@@ -1,0 +1,5 @@
+- generic [ref=e2]:
+  - heading "Block A" [level=2] [ref=e3]
+  - code [ref=e6]: seed 1 +node A +node B +edge A -> B frame "step 1" A -> B frame "step 2"
+  - heading "Block B" [level=2] [ref=e7]
+  - code [ref=e10]: seed 2 +node X +node Y +edge X -> Y frame "go" X -> Y

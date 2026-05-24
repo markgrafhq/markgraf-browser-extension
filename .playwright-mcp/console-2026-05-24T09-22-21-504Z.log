@@ -1,0 +1,8 @@
+[      42ms] TypeError: outerCodeContainerImpl(...) is not a function
+    at http://localhost:8766/assets/content.js:704:47
+    at http://localhost:8766/assets/content.js:69:19
+    at http://localhost:8766/assets/content.js:60:19
+    at transform (http://localhost:8766/assets/content.js:714:65)
+    at main (http://localhost:8766/assets/content.js:750:5)
+    at http://localhost:8766/assets/content.js:756:3
+    at http://localhost:8766/assets/content.js:757:3

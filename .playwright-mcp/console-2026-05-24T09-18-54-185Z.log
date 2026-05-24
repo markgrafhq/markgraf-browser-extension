@@ -1,0 +1,32 @@
+[      19ms] [WARNING] Failed to decode downloaded font: http://localhost:6006/user/public/Ilisarniq-Demi.otf @ http://localhost:6006/#/Test.Stories.AnimationLive.Stories/canonical:0
+[      19ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ http://localhost:6006/#/Test.Stories.AnimationLive.Stories/canonical:0
+[      19ms] [WARNING] Failed to decode downloaded font: http://localhost:6006/user/public/CommitMono-Regular.woff2 @ http://localhost:6006/#/Test.Stories.AnimationLive.Stories/canonical:0
+[      19ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ http://localhost:6006/#/Test.Stories.AnimationLive.Stories/canonical:0
+[      32ms] A network error occurred.
+[      32ms] A network error occurred.
+[      95ms] [WARNING] Failed to decode downloaded font: http://localhost:6006/user/public/Ilisarniq-Demi.otf @ chrome-extension://jjhefcfhmnkfeepcpnilbbkaadhngkbi/injection/index.js:164
+[      96ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ chrome-extension://jjhefcfhmnkfeepcpnilbbkaadhngkbi/injection/index.js:164
+[      96ms] [WARNING] Failed to decode downloaded font: http://localhost:6006/user/public/CommitMono-Regular.woff2 @ chrome-extension://jjhefcfhmnkfeepcpnilbbkaadhngkbi/injection/index.js:164
+[      96ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ chrome-extension://jjhefcfhmnkfeepcpnilbbkaadhngkbi/injection/index.js:164
+[     859ms] [LOG] routeOne: {eid: client->api, sx: 30, sy: 4, tx: 30, ty: 12} @ http://localhost:6006/output/Debug/foreign.js:25
+[     859ms] [LOG] routeOne: {eid: api->db, sx: 28, sy: 16, tx: 6, ty: 24} @ http://localhost:6006/output/Debug/foreign.js:25
+[     860ms] [LOG] routeOne: {eid: api->cache, sx: 30, sy: 16, tx: 30, ty: 24} @ http://localhost:6006/output/Debug/foreign.js:25
+[     860ms] [LOG] routeOne: {eid: api->queue, sx: 32, sy: 16, tx: 54, ty: 24} @ http://localhost:6006/output/Debug/foreign.js:25
+[     872ms] [WARNING] Failed to decode downloaded font: http://localhost:6006/user/public/Ilisarniq-Demi.otf @ http://localhost:6006/@fs/Users/mark/Developer/markgraf/npm/node_modules/.vite/deps/chunk-MTX2RYSK.js?v=d6acd344:381
+[     872ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ http://localhost:6006/@fs/Users/mark/Developer/markgraf/npm/node_modules/.vite/deps/chunk-MTX2RYSK.js?v=d6acd344:381
+[     872ms] [WARNING] Failed to decode downloaded font: http://localhost:6006/user/public/CommitMono-Regular.woff2 @ http://localhost:6006/@fs/Users/mark/Developer/markgraf/npm/node_modules/.vite/deps/chunk-MTX2RYSK.js?v=d6acd344:381
+[     872ms] [WARNING] OTS parsing error: invalid sfntVersion: 1008821359 @ http://localhost:6006/@fs/Users/mark/Developer/markgraf/npm/node_modules/.vite/deps/chunk-MTX2RYSK.js?v=d6acd344:381
+[    2671ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    2701ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    2778ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    3726ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    3853ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    3853ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    3941ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    3941ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    3954ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    3954ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://api.github.com/_private/browser/stats:0
+[    3955ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    3968ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    6901ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
+[    8065ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_CLIENT @ https://collector.github.com/github/collect:0
