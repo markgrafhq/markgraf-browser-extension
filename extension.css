@@ -5,4 +5,48 @@
   min-height: 240px;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+}
+
+.markgraf-source-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font: 600 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+
+.markgraf-embed:hover .markgraf-source-toggle,
+.markgraf-embed:focus-within .markgraf-source-toggle,
+.markgraf-embed.markgraf-show-source .markgraf-source-toggle {
+  opacity: 1;
+}
+
+.markgraf-source {
+  display: none;
+  margin: 0;
+  padding: 16px;
+  font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  white-space: pre;
+  overflow: auto;
+  background: transparent;
+  color: var(--fgColor-default, #1f2328);
+}
+
+.markgraf-embed.markgraf-show-source > canvas,
+.markgraf-embed.markgraf-show-source > [data-mg="play-overlay"],
+.markgraf-embed.markgraf-show-source > [data-mg="bar"] {
+  display: none;
+}
+
+.markgraf-embed.markgraf-show-source > .markgraf-source {
+  display: block;
 }

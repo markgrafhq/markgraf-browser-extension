@@ -12,6 +12,7 @@ module Markgraf.Extension.Platform
   , parseOk
   , pauseAllEmbeds
   , outerCodeContainer
+  , installSourceToggles
   ) where
 
 import Prelude
@@ -74,3 +75,8 @@ foreign import outerCodeContainerImpl :: Element -> Effect Element
 
 outerCodeContainer :: Element -> Effect Element
 outerCodeContainer = outerCodeContainerImpl
+
+foreign import installSourceTogglesImpl :: Effect Unit
+
+installSourceToggles :: Effect Unit
+installSourceToggles = installSourceTogglesImpl

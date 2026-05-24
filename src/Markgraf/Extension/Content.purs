@@ -9,7 +9,7 @@ import Data.String as String
 import Data.Traversable (traverse)
 import Effect (Effect)
 import Effect.Ref as Ref
-import Markgraf.Extension.Platform (callMountAll, callTryParse, lookupMountAll, lookupTryParse, outerCodeContainer, parseOk, pauseAllEmbeds, queueMicrotask, replaceWith, runtimeGetURL)
+import Markgraf.Extension.Platform (callMountAll, callTryParse, installSourceToggles, lookupMountAll, lookupTryParse, outerCodeContainer, parseOk, pauseAllEmbeds, queueMicrotask, replaceWith, runtimeGetURL)
 import Unsafe.Coerce (unsafeCoerce)
 import Web.DOM.Document (Document, createElement, toNonElementParentNode, toParentNode)
 import Web.DOM.Element (Element, closest, getAttribute, setAttribute, setClassName, setId, tagName, toNode)
@@ -135,7 +135,7 @@ tryReplacePre doc pre = do
         setAttribute "data-markgraf" "" div
         setAttribute "data-markgraf-paused" "true" div
         setAttribute "data-markgraf-replaced" "1" div
-        setTextContent src (toNode div)
+        setAttribute "data-markgraf-src" src div
         host <- outerCodeContainer pre
         replaceWith host div
         pure true
@@ -169,3 +169,4 @@ mountPending = do
   for_ mFn \fn -> do
     callMountAll fn
     pauseAllEmbeds
+    installSourceToggles

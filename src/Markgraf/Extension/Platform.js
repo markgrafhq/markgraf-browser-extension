@@ -24,6 +24,27 @@ export const pauseAllEmbedsImpl = () => {
 };
 
 export const outerCodeContainerImpl = (el) => () =>
+  el.closest("div.snippet-clipboard-content") ||
   el.closest("div.highlight, div[class*='highlight-source-']") ||
   el.closest("pre") ||
   el;
+
+export const installSourceTogglesImpl = () => {
+  document.querySelectorAll("[data-markgraf]").forEach((el) => {
+    if (el.dataset.markgrafToggle === "1") return;
+    el.dataset.markgrafToggle = "1";
+    const pre = document.createElement("pre");
+    pre.className = "markgraf-source";
+    pre.textContent = el.getAttribute("data-markgraf-src") || "";
+    el.appendChild(pre);
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "markgraf-source-toggle";
+    btn.setAttribute("aria-label", "toggle source");
+    btn.textContent = "</>";
+    btn.addEventListener("click", () => {
+      el.classList.toggle("markgraf-show-source");
+    });
+    el.appendChild(btn);
+  });
+};
