@@ -2,17 +2,13 @@ module Markgraf.Extension.Platform
   ( runtimeGetURL
   , queueMicrotask
   , TryParseFn
-  , MountAllFn
   , lookupTryParse
-  , lookupMountAll
   , callTryParse
-  , callMountAll
   , replaceWith
   , ParseResult
   , parseOk
-  , pauseAllEmbeds
   , outerCodeContainer
-  , installSourceToggles
+  , installLazyMount
   ) where
 
 import Prelude
@@ -33,7 +29,6 @@ queueMicrotask :: Effect Unit -> Effect Unit
 queueMicrotask = queueMicrotaskImpl
 
 foreign import data TryParseFn :: Type
-foreign import data MountAllFn :: Type
 foreign import data ParseResult :: Type
 
 foreign import windowMarkgrafTryParseFnImpl :: Effect (Nullable TryParseFn)
@@ -41,20 +36,10 @@ foreign import windowMarkgrafTryParseFnImpl :: Effect (Nullable TryParseFn)
 lookupTryParse :: Effect (Maybe TryParseFn)
 lookupTryParse = toMaybe <$> windowMarkgrafTryParseFnImpl
 
-foreign import windowMarkgrafMountAllFnImpl :: Effect (Nullable MountAllFn)
-
-lookupMountAll :: Effect (Maybe MountAllFn)
-lookupMountAll = toMaybe <$> windowMarkgrafMountAllFnImpl
-
 foreign import callTryParseImpl :: TryParseFn -> String -> Effect ParseResult
 
 callTryParse :: TryParseFn -> String -> Effect ParseResult
 callTryParse = callTryParseImpl
-
-foreign import callMountAllImpl :: MountAllFn -> Effect Unit
-
-callMountAll :: MountAllFn -> Effect Unit
-callMountAll = callMountAllImpl
 
 foreign import replaceWithImpl :: Element -> Element -> Effect Unit
 
@@ -66,17 +51,12 @@ foreign import parseOkImpl :: ParseResult -> Boolean
 parseOk :: ParseResult -> Boolean
 parseOk = parseOkImpl
 
-foreign import pauseAllEmbedsImpl :: Effect Unit
-
-pauseAllEmbeds :: Effect Unit
-pauseAllEmbeds = pauseAllEmbedsImpl
-
 foreign import outerCodeContainerImpl :: Element -> Effect Element
 
 outerCodeContainer :: Element -> Effect Element
 outerCodeContainer = outerCodeContainerImpl
 
-foreign import installSourceTogglesImpl :: Effect Unit
+foreign import installLazyMountImpl :: Effect Unit
 
-installSourceToggles :: Effect Unit
-installSourceToggles = installSourceTogglesImpl
+installLazyMount :: Effect Unit
+installLazyMount = installLazyMountImpl

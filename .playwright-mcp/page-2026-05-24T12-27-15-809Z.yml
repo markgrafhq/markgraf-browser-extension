@@ -1,0 +1,18 @@
+- generic [ref=e2]:
+  - heading "Block A (top)" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - button "play"
+      - generic:
+        - slider: "0"
+        - generic [ref=e6] [cursor=pointer]: request
+      - generic: 0.00 / 2.00
+      - combobox "speed":
+        - option "0.25×"
+        - option "0.5×"
+        - option "1×" [selected]
+        - option "2×"
+    - button "toggle source" [ref=e7] [cursor=pointer]:
+      - img [ref=e8]
+  - heading "Block B (far below)" [level=2] [ref=e10]
+  - generic [ref=e12]: "seed 2 frame setup { +node a \"A\" +node b \"B\" +edge a b } frame go { a -> b \"hi\" }"

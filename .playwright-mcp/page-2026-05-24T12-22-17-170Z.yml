@@ -1,0 +1,27 @@
+- generic [ref=e2]:
+  - heading "Block A (above fold)" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - button "play"
+      - generic:
+        - slider: "82"
+        - generic [ref=e6] [cursor=pointer]: request
+      - generic: 0.27 / 3.30
+      - combobox "speed":
+        - option "0.25×"
+        - option "0.5×"
+        - option "1×" [selected]
+        - option "2×"
+  - heading "Block B (far below the fold)" [level=2] [ref=e7]
+  - generic [ref=e8]:
+    - generic:
+      - button "play"
+      - generic:
+        - slider: "0"
+        - generic [ref=e10] [cursor=pointer]: go
+      - generic: 0.00 / 2.00
+      - combobox "speed":
+        - option "0.25×"
+        - option "0.5×"
+        - option "1×" [selected]
+        - option "2×"

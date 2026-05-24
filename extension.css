@@ -28,6 +28,12 @@
   transition: opacity 0.12s, background 0.12s;
 }
 
+.markgraf-embed:hover .markgraf-source-toggle,
+.markgraf-embed:focus-within .markgraf-source-toggle,
+.markgraf-embed.markgraf-show-source .markgraf-source-toggle {
+  opacity: 1;
+}
+
 .markgraf-source-toggle:hover {
   background: rgba(0, 0, 0, 0.75);
 }
@@ -36,12 +42,6 @@
   width: 16px;
   height: 16px;
   display: block;
-}
-
-.markgraf-embed:hover .markgraf-source-toggle,
-.markgraf-embed:focus-within .markgraf-source-toggle,
-.markgraf-embed.markgraf-show-source .markgraf-source-toggle {
-  opacity: 1;
 }
 
 .markgraf-source {
@@ -55,12 +55,15 @@
   color: var(--fgColor-default, #1f2328);
 }
 
+/* Placeholder pre is visible until the embed mounts; toggle pre is hidden
+   by default and revealed when the user clicks the </>-button. */
+.markgraf-source.markgraf-placeholder,
+.markgraf-embed.markgraf-show-source > .markgraf-source {
+  display: block;
+}
+
 .markgraf-embed.markgraf-show-source > canvas,
 .markgraf-embed.markgraf-show-source > [data-mg="play-overlay"],
 .markgraf-embed.markgraf-show-source > [data-mg="bar"] {
   display: none;
-}
-
-.markgraf-embed.markgraf-show-source > .markgraf-source {
-  display: block;
 }

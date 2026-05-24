@@ -9,7 +9,7 @@ import Data.String as String
 import Data.Traversable (traverse)
 import Effect (Effect)
 import Effect.Ref as Ref
-import Markgraf.Extension.Platform (callMountAll, callTryParse, installSourceToggles, lookupMountAll, lookupTryParse, outerCodeContainer, parseOk, pauseAllEmbeds, queueMicrotask, replaceWith, runtimeGetURL)
+import Markgraf.Extension.Platform (callTryParse, installLazyMount, lookupTryParse, outerCodeContainer, parseOk, queueMicrotask, replaceWith, runtimeGetURL)
 import Unsafe.Coerce (unsafeCoerce)
 import Web.DOM.Document (Document, createElement, toNonElementParentNode, toParentNode)
 import Web.DOM.Element (Element, closest, getAttribute, setAttribute, setClassName, setId, tagName, toNode)
@@ -35,7 +35,7 @@ main :: Effect Unit
 main = do
   installFontFace
   _ <- transform
-  mountPending
+  installLazyMount
   observeMutations
 
 observeMutations :: Effect Unit
@@ -58,7 +58,7 @@ schedule scheduled = do
     queueMicrotask do
       Ref.write false scheduled
       changed <- transform
-      when changed mountPending
+      when changed installLazyMount
 
 -- | True if any record adds nodes AND the mutation isn't happening inside
 -- | an already-mounted markgraf player (whose tick-by-tick DOM churn would
@@ -133,9 +133,17 @@ tryReplacePre doc pre = do
         div <- createElement "div" doc
         setClassName "markgraf-embed markgraf-gh" div
         setAttribute "data-markgraf" "" div
-        setAttribute "data-markgraf-paused" "true" div
         setAttribute "data-markgraf-replaced" "1" div
         setAttribute "data-markgraf-src" src div
+        -- | Lie to the bundle's auto-mountAll (fires on DOMContentLoaded
+        -- | after we've created the divs) so it skips us; our own
+        -- | IntersectionObserver-driven mount uses a separate attribute.
+        setAttribute "data-markgraf-mounted" "1" div
+        setAttribute "data-markgraf-lazy" "pending" div
+        sourcePre <- createElement "pre" doc
+        setClassName "markgraf-source markgraf-placeholder" sourcePre
+        setTextContent src (toNode sourcePre)
+        _ <- appendChild (toNode sourcePre) (toNode div)
         host <- outerCodeContainer pre
         replaceWith host div
         pure true
@@ -155,18 +163,10 @@ sourceOf pre = do
 
 -- | Confirm via the embed bundle's parser; if the bundle hasn't exposed
 -- | itself yet, trust the lang-attribute selector this pass and let
--- | auto-mount pick up the resulting divs synchronously.
+-- | the IntersectionObserver pick up the divs as they come into view.
 confirmParse :: String -> Effect Boolean
 confirmParse src = do
   mFn <- lookupTryParse
   case mFn of
     Nothing -> pure true
     Just fn -> parseOk <$> callTryParse fn src
-
-mountPending :: Effect Unit
-mountPending = do
-  mFn <- lookupMountAll
-  for_ mFn \fn -> do
-    callMountAll fn
-    pauseAllEmbeds
-    installSourceToggles
