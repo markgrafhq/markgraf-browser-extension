@@ -1,0 +1,17 @@
+- generic [ref=e2]:
+  - heading "Demo" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - button "play"
+      - generic:
+        - slider: "0"
+        - generic:
+          - generic [ref=e6] [cursor=pointer]: request
+          - generic [ref=e7] [cursor=pointer]: respond
+      - generic: 0.00 / 5.30
+      - combobox "speed":
+        - option "0.25×"
+        - option "0.5×"
+        - option "1×" [selected]
+        - option "2×"
+    - button "toggle source" [ref=e8] [cursor=pointer]: </>

@@ -13,15 +13,29 @@
   top: 8px;
   right: 8px;
   z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 4px 8px;
-  font: 600 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-radius: 6px;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.12s;
+  transition: opacity 0.12s, background 0.12s;
+}
+
+.markgraf-source-toggle:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.markgraf-source-toggle svg {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
 
 .markgraf-embed:hover .markgraf-source-toggle,
