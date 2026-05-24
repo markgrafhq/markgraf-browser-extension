@@ -36,14 +36,6 @@ export const newViewportObserverImpl = (rootMarginPx) => (cb) => () => {
 export const observeElementImpl = (io) => (el) => () => io.observe(el);
 export const unobserveElementImpl = (io) => (el) => () => io.unobserve(el);
 
-export const requestIdleImpl = (cb) => () => {
-  if (typeof requestIdleCallback === "function") {
-    requestIdleCallback(() => cb(), { timeout: 250 });
-  } else {
-    setTimeout(() => cb(), 0);
-  }
-};
-
 export const loadFontThenImpl = (fontSpec) => (cb) => () => {
   const done = () => cb()();
   if (typeof document.fonts?.load === "function") {
@@ -53,14 +45,6 @@ export const loadFontThenImpl = (fontSpec) => (cb) => () => {
   }
 };
 
-export const clickElementImpl = (el) => () => el.click();
-
-export const classListToggleImpl = (cls) => (el) => () =>
-  el.classList.toggle(cls);
-
 export const setInnerHTMLImpl = (html) => (el) => () => {
   el.innerHTML = html;
 };
-
-export const addClickListenerImpl = (el) => (cb) => () =>
-  el.addEventListener("click", () => cb());

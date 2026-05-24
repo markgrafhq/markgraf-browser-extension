@@ -9,10 +9,11 @@ import Data.String as String
 import Data.Traversable (traverse)
 import Effect (Effect)
 import Effect.Ref as Ref
-import Markgraf.Extension.Platform (addClickListener, callTryParse, classListToggle, clickElement, loadFontThen, lookupTryParse, mountEmbed, newViewportObserver, observeElement, outerCodeContainer, parseOk, queueMicrotask, replaceWith, requestIdle, runtimeGetURL, setInnerHTML, unobserveElement)
+import Markgraf.Extension.Platform (callTryParse, loadFontThen, lookupTryParse, mountEmbed, newViewportObserver, observeElement, outerCodeContainer, parseOk, queueMicrotask, replaceWith, runtimeGetURL, setInnerHTML, unobserveElement)
 import Unsafe.Coerce (unsafeCoerce)
+import Web.DOM.DOMTokenList as DOMTokenList
 import Web.DOM.Document (Document, createElement, toNonElementParentNode, toParentNode)
-import Web.DOM.Element (Element, closest, getAttribute, setAttribute, setClassName, setId, tagName, toNode)
+import Web.DOM.Element (Element, classList, closest, getAttribute, setAttribute, setClassName, setId, tagName, toEventTarget, toNode)
 import Web.DOM.Element as Element
 import Web.DOM.MutationObserver (mutationObserver, observe)
 import Web.DOM.MutationRecord (MutationRecord, addedNodes, target)
@@ -20,11 +21,13 @@ import Web.DOM.Node (Node, appendChild, parentElement, setTextContent, textConte
 import Web.DOM.NodeList (toArray)
 import Web.DOM.NonElementParentNode (getElementById)
 import Web.DOM.ParentNode (QuerySelector(..), querySelector, querySelectorAll)
+import Web.Event.EventTarget (addEventListener, eventListener)
 import Web.HTML (window)
+import Web.HTML.Event.EventTypes as ET
 import Web.HTML.HTMLDocument (documentElement, head, toDocument)
-import Web.HTML.HTMLElement (toNode) as HTMLElement
+import Web.HTML.HTMLElement as HTMLElement
 import Web.HTML.HTMLHtmlElement (toNode) as HTMLHtmlElement
-import Web.HTML.Window (document)
+import Web.HTML.Window (document, requestIdleCallback)
 
 preSelector :: String
 preSelector = ".markdown-body [lang=\"markgraf\"], .comment-body [lang=\"markgraf\"]"
@@ -188,7 +191,9 @@ installLazyMount = do
   onEnter doc observerRef el = do
     mObserver <- Ref.read observerRef
     for_ mObserver \io -> unobserveElement io el
-    requestIdle (mountAndDecorate doc el)
+    win <- window
+    _ <- requestIdleCallback { timeout: 250 } (mountAndDecorate doc el) win
+    pure unit
 
 mountAndDecorate :: Document -> Element -> Effect Unit
 mountAndDecorate doc el = do
@@ -209,7 +214,7 @@ ensurePaused el = do
   mBtn <- querySelector (QuerySelector "[data-mg=\"play\"]") (Element.toParentNode el)
   for_ mBtn \btn -> do
     playing <- getAttribute "data-mg-playing" btn
-    when (playing == Just "1") (clickElement btn)
+    when (playing == Just "1") (for_ (HTMLElement.fromElement btn) HTMLElement.click)
 
 installToggle :: Document -> Element -> Effect Unit
 installToggle doc el = do
@@ -228,6 +233,12 @@ installToggle doc el = do
       setAttribute "type" "button" btn
       setAttribute "aria-label" "toggle source" btn
       setInnerHTML codeBracketSvg btn
-      addClickListener btn (classListToggle "markgraf-show-source" el)
+      listener <- eventListener \_ -> toggleSource el
+      addEventListener ET.click listener false (toEventTarget btn)
       _ <- appendChild (toNode btn) (toNode el)
       pure unit
+  where
+  toggleSource embed = do
+    tokens <- classList embed
+    _ <- DOMTokenList.toggle tokens "markgraf-show-source"
+    pure unit
