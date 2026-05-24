@@ -1,0 +1,5 @@
+[     279ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://localhost:8769/favicon.ico:0
+[     325ms] TypeError: cb(...) is not a function
+    at done (http://localhost:8769/assets/content.js:285:28)
+[   13586ms] TypeError: cb(...) is not a function
+    at done (http://localhost:8769/assets/content.js:285:28)
