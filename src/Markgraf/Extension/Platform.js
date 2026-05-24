@@ -19,7 +19,17 @@ export const outerCodeContainerImpl = (el) => () =>
 
 export const mountEmbedImpl = (el) => (src) => () => {
   const fn = window.markgraf && window.markgraf.mount;
-  if (fn) fn(el, src);
+  if (!fn) return;
+  fn(el, src);
+  const playBtn = el.querySelector('[data-mg="play"]');
+  if (!playBtn) return;
+  const stage = el.querySelector('[data-mg="stage"]');
+  if (stage) {
+    stage.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      playBtn.click();
+    });
+  }
 };
 
 export const newViewportObserverImpl = (rootMarginPx) => (cb) => () => {
