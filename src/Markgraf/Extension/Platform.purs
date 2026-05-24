@@ -10,6 +10,8 @@ module Markgraf.Extension.Platform
   , replaceWith
   , ParseResult
   , parseOk
+  , pauseAllEmbeds
+  , outerCodeContainer
   ) where
 
 import Prelude
@@ -62,3 +64,13 @@ foreign import parseOkImpl :: ParseResult -> Boolean
 
 parseOk :: ParseResult -> Boolean
 parseOk = parseOkImpl
+
+foreign import pauseAllEmbedsImpl :: Effect Unit
+
+pauseAllEmbeds :: Effect Unit
+pauseAllEmbeds = pauseAllEmbedsImpl
+
+foreign import outerCodeContainerImpl :: Element -> Effect Element
+
+outerCodeContainer :: Element -> Effect Element
+outerCodeContainer = outerCodeContainerImpl
