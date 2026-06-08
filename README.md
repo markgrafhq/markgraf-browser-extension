@@ -11,7 +11,7 @@ If the block below shows source code instead of a playable animation, you don't 
 ```markgraf
 seed 1
 
-frame setup {
+keyframe setup {
   +node client "Client"
   +node api    "API"
   +node db     "Database"
@@ -21,16 +21,16 @@ frame setup {
   +edge api cache
 }
 
-frame "write request" {
+keyframe "write request" {
   client -> api "POST /user"
   api -> db "INSERT"
 }
 
-frame "invalidate cache" {
+keyframe "invalidate cache" {
   api -> cache "DEL user:42"
 }
 
-frame "respond" {
+keyframe "respond" {
   client <- api "201"
 }
 ```
