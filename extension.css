@@ -67,3 +67,23 @@
 .markgraf-embed.markgraf-show-source > [data-mg="bar"] {
   display: none;
 }
+
+.markgraf-source .mg-tok-keyword {
+  color: var(--color-prettylights-syntax-keyword, #cf222e);
+}
+.markgraf-source .mg-tok-string {
+  color: var(--color-prettylights-syntax-string, #0a3069);
+}
+.markgraf-source .mg-tok-number {
+  color: var(--color-prettylights-syntax-constant, #0550ae);
+}
+.markgraf-source .mg-tok-comment {
+  color: var(--color-prettylights-syntax-comment, #57606a);
+  font-style: italic;
+}
+.markgraf-source .mg-tok-op {
+  color: var(--color-prettylights-syntax-keyword, #cf222e);
+}
+.markgraf-source .mg-tok-brace {
+  color: var(--fgColor-muted, #656d76);
+}

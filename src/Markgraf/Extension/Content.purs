@@ -9,6 +9,7 @@ import Data.String as String
 import Data.Traversable (traverse)
 import Effect (Effect)
 import Effect.Ref as Ref
+import Markgraf.Extension.Highlight (highlightHtml)
 import Markgraf.Extension.Platform (callTryParse, loadFontThen, lookupTryParse, mountEmbed, newViewportObserver, observeElement, outerCodeContainer, parseOk, queueMicrotask, replaceWith, runtimeGetURL, setInnerHTML, unobserveElement)
 import Unsafe.Coerce (unsafeCoerce)
 import Web.DOM.DOMTokenList as DOMTokenList
@@ -205,10 +206,23 @@ mountAndDecorate doc el = do
         src <- fromMaybe "" <$> getAttribute "data-markgraf-src" el
         demotePlaceholder el
         mountEmbed el src
+        installSourcePre doc el src
         setAttribute "data-markgraf-lazy" "done" el
         ensurePaused el
         installToggle doc el
     _ -> pure unit
+
+installSourcePre :: Document -> Element -> String -> Effect Unit
+installSourcePre doc el src = do
+  existing <- querySelector (QuerySelector ".markgraf-source") (Element.toParentNode el)
+  case existing of
+    Just _ -> pure unit
+    Nothing -> do
+      pre <- createElement "pre" doc
+      setClassName "markgraf-source" pre
+      setInnerHTML (highlightHtml src) pre
+      _ <- appendChild (toNode pre) (toNode el)
+      pure unit
 
 demotePlaceholder :: Element -> Effect Unit
 demotePlaceholder el = do

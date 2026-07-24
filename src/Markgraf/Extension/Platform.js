@@ -47,7 +47,7 @@ export const observeElementImpl = (io) => (el) => () => io.observe(el);
 export const unobserveElementImpl = (io) => (el) => () => io.unobserve(el);
 
 export const loadFontThenImpl = (fontSpec) => (cb) => () => {
-  const done = () => cb()();
+  const done = () => cb();
   if (typeof document.fonts?.load === "function") {
     document.fonts.load(fontSpec).then(done, done);
   } else {
