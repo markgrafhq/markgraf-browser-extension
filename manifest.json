@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Markgraf for GitHub",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Replace ```markgraf fenced blocks on GitHub with the live markgraf animation player.",
   "content_scripts": [
     {
