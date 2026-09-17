@@ -62,9 +62,7 @@ foreign import outerCodeContainerImpl :: Element -> Effect Element
 outerCodeContainer :: Element -> Effect Element
 outerCodeContainer = outerCodeContainerImpl
 
-foreign import mountEmbedImpl :: Element -> String -> Effect Unit
-
-mountEmbed :: Element -> String -> Effect Unit
+mountEmbed :: Element -> String -> Boolean -> Effect Unit
 mountEmbed = mountEmbedImpl
 
 foreign import data ViewportObserver :: Type
@@ -93,3 +91,5 @@ foreign import setInnerHTMLImpl :: String -> Element -> Effect Unit
 
 setInnerHTML :: String -> Element -> Effect Unit
 setInnerHTML = setInnerHTMLImpl
+
+foreign import mountEmbedImpl :: Element -> String -> Boolean -> Effect Unit

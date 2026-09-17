@@ -205,10 +205,9 @@ mountAndDecorate doc el = do
       loadFontThen fontSpec do
         src <- fromMaybe "" <$> getAttribute "data-markgraf-src" el
         demotePlaceholder el
-        mountEmbed el src
+        mountEmbed el src true
         installSourcePre doc el src
         setAttribute "data-markgraf-lazy" "done" el
-        ensurePaused el
         installToggle doc el
     _ -> pure unit
 
@@ -230,13 +229,6 @@ demotePlaceholder el = do
   for_ mPre \pre -> do
     tokens <- classList pre
     DOMTokenList.remove tokens "markgraf-placeholder"
-
-ensurePaused :: Element -> Effect Unit
-ensurePaused el = do
-  mBtn <- querySelector (QuerySelector "[data-mg=\"play\"]") (Element.toParentNode el)
-  for_ mBtn \btn -> do
-    playing <- getAttribute "data-mg-playing" btn
-    when (playing == Just "1") (for_ (HTMLElement.fromElement btn) HTMLElement.click)
 
 installToggle :: Document -> Element -> Effect Unit
 installToggle doc el = do

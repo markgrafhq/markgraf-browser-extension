@@ -17,19 +17,10 @@ export const outerCodeContainerImpl = (el) => () =>
   el.closest("pre") ||
   el;
 
-export const mountEmbedImpl = (el) => (src) => () => {
+export const mountEmbedImpl = (el) => (src) => (startPaused) => () => {
   const fn = window.markgraf && window.markgraf.mount;
   if (!fn) return;
-  fn(el, src);
-  const playBtn = el.querySelector('[data-mg="play"]');
-  if (!playBtn) return;
-  const stage = el.querySelector('[data-mg="stage"]');
-  if (stage) {
-    stage.addEventListener("click", (ev) => {
-      ev.preventDefault();
-      playBtn.click();
-    });
-  }
+  fn(el, src, startPaused);
 };
 
 export const newViewportObserverImpl = (rootMarginPx) => (cb) => () => {
