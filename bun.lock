@@ -5,7 +5,7 @@
     "": {
       "name": "@markgrafhq/markgraf-browser-extension",
       "dependencies": {
-        "@markgrafhq/markgraf-embed": "0.0.58",
+        "@markgrafhq/markgraf-embed": "0.0.60",
       },
       "devDependencies": {
         "esbuild": "^0.28.0",
@@ -74,7 +74,7 @@
 
     "@isaacs/fs-minipass": ["@isaacs/fs-minipass@4.0.1", "", { "dependencies": { "minipass": "^7.0.4" } }, "sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w=="],
 
-    "@markgrafhq/markgraf-embed": ["@markgrafhq/markgraf-embed@0.0.58", "", {}, "sha512-yHWLOs8vPxw9KQ9tRFv+VNx41QHVYXwc2ykaW4eG3tW34FAlRsMs/IWdipuo1bho2P0nzYkGQ20TLDIZlNVawA=="],
+    "@markgrafhq/markgraf-embed": ["@markgrafhq/markgraf-embed@0.0.60", "", {}, "sha512-2DTqH+QpxJPuFtJtvab5niFeL0/XMnskzPRoA7jG2BaPzNAGP1zfgVO0RQd96lwtPMGClbQt8S38Z4FPQcRBIg=="],
 
     "@nodelib/fs.scandir": ["@nodelib/fs.scandir@4.0.1", "", { "dependencies": { "@nodelib/fs.stat": "4.0.0", "run-parallel": "^1.2.0" } }, "sha512-vAkI715yhnmiPupY+dq+xenu5Tdf2TBQ66jLvBIcCddtz+5Q8LbMKaf9CIJJreez8fQ8fgaY+RaywQx8RJIWpw=="],
 
